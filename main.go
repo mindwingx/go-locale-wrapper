@@ -38,6 +38,7 @@ func (l *locale) InitLocale(format string, locales []string) {
 	}
 }
 
+// Get returns message based on selected translation file
 func (l *locale) Get(key string) string {
 	localizer := i18n.NewLocalizer(l.bundle, l.Lang)
 
@@ -50,6 +51,7 @@ func (l *locale) Get(key string) string {
 	return localizedMessage
 }
 
+// Plural returns message by params and multiple condition
 func (l *locale) Plural(key string, params map[string]string) string {
 	localizer := i18n.NewLocalizer(l.bundle, l.Lang)
 	data := make(map[string]string)
