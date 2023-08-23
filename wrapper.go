@@ -29,11 +29,11 @@ func NewLocale(registry abstraction.Registry) abstraction.Locale {
 	return lang
 }
 
-// InitLocale language files formats could be contained JSON,YML, etc
-func (l *locale) InitLocale(format string, locales []string) {
-	l.bundle.RegisterUnmarshalFunc(format, json.Unmarshal)
+// InitLocaleJson language files formats could be contained JSON,YML, etc
+func (l *locale) InitLocaleJson(localesPath []string) {
+	l.bundle.RegisterUnmarshalFunc("json", json.Unmarshal)
 
-	for _, localeFilePath := range locales {
+	for _, localeFilePath := range localesPath {
 		l.bundle.MustLoadMessageFile(localeFilePath)
 	}
 }

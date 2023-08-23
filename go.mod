@@ -3,7 +3,7 @@ module github.com/mindwingx/go-locale-wrapper
 go 1.19
 
 require (
-	github.com/mindwingx/abstraction v0.0.0-20230823142114-812744332e9f
+	github.com/mindwingx/abstraction v0.0.0-20230823145711-8e5d3baef72c
 	github.com/mindwingx/go-helper v0.0.0-20230823115142-6448921aaddd
 	github.com/nicksnyder/go-i18n/v2 v2.2.1
 	golang.org/x/text v0.12.0
